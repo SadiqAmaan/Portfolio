@@ -1,9 +1,12 @@
 import React from 'react'
-
+import {AiOutlineMenu} from 'react-icons/ai'
 const Header = () => {
   return (
     <nav>
       <NavContent/>
+      <button className='navBtn'>
+        <AiOutlineMenu/>
+      </button>
     </nav>
   )
 }
@@ -17,7 +20,7 @@ const NavContent = ()=>(
     <a href="#work">Work</a>
     <a href="#experience">Experience</a>
     <a href="#services">Services</a>
-    <a href="#testimonials">Testimonials</a>
+
     <a href="#contact">Contact</a>
   </div>
 
