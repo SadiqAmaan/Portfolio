@@ -5,15 +5,8 @@ import { BsArrowUpRight, BsChevronDown } from "react-icons/bs";
 import me from "../assets/logo.png";
 
 const Home = () => {
-  const clientCount = useRef(null);
   const projectCount = useRef(null);
 
-  const animationClientsCount = () => {
-    animate(0, 100, {
-      duration: 2,
-      onUpdate: (v) => (clientCount.current.textContent = v.toFixed()),
-    });
-  };
   const animationProjectsCount = () => {
     animate(0, 20, {
       duration: 2,
@@ -63,21 +56,23 @@ const Home = () => {
             }}
           />
           <div>
-            <a href="mailto:amaankhan1666@gmail.com">Hire Me!</a>
+            <a href="mailto:amaankhan1666@gmail.com" target={'blank'}>Hire Me!</a>
             <a href="#work">
               Projects <BsArrowUpRight />
             </a>
           </div>
           <article>
-            <p>
-              +
-              <motion.span
-                whileInView={animationClientsCount}
-                ref={clientCount}
-              >
-              </motion.span>
-            </p>
-            <span>Clients WorldWide</span>
+              <span className="tech">
+                CURRENTLY USING
+                <Typewriter className='subtech'
+            options={{
+              strings: ["REACT-JS", "NEXT-JS"],
+              autoStart: true,
+              loop: true,
+              cursor: "",
+              wrapperClassName: "typewpara2",
+            }}
+          /></span>
           </article>
           <aside>
             <article>
